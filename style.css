@@ -8,6 +8,7 @@
 }
 
 html, body {
+  position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -32,7 +33,12 @@ html, body {
   border-radius: 15px;
   padding: 30px;
   width: 90%;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  max-width: 800px;
   text-align: center;
   z-index: 10;
   backdrop-filter: blur(5px);
@@ -106,8 +112,8 @@ h1::after {
   translate: -50% -50%;
   z-index: 1; /* Mettre le chat en arrière-plan */
   opacity: 0.8; /* Un peu transparent pour ne pas distraire */
-  width: 400px; /* Grande taille pour l'effet visuel */
-  height: 400px;
+  width: 600px; /* Grande taille pour l'effet visuel */
+  height: 600px;
 }
 
 .cat img {
