@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #000000; /* Fond complètement noir pour correspondre à l'image */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.maintenance-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond plus sombre et transparent */
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Bordure subtile */
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: white; /* Ligne blanche sous le titre pour correspondre à l'esthétique minimaliste */
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: #cccccc; /* Gris clair pour le sous-titre */
+  font-weight: 300;
+}
+
+.coming-soon {
+  margin: 30px 0;
+}
+
+.launch-date {
+  font-weight: 600;
+  color: white; /* Texte blanc pour meilleure lisibilité */
+  margin-top: 10px;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #aaaaaa; /* Gris clair au survol pour un effet subtil */
+}
+
+.cat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1; /* Mettre le chat en arrière-plan */
+  opacity: 0.8; /* Un peu transparent pour ne pas distraire */
+  width: 400px; /* Grande taille pour l'effet visuel */
+  height: 400px;
+}
+
+.cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.3); /* Gris très clair, discret */
+}
+
+/* Animation plus subtile */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.maintenance-box {
+  animation: pulse 4s infinite ease-in-out; /* Animation plus lente et subtile */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+  }
+  
+  .maintenance-box {
+    padding: 20px;
+  }
+  
+  .cat {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  .subtitle {
+    font-size: 1em;
+  }
+  
+  .maintenance-box {
+    padding: 15px;
+    width: 95%;
+  }
+  
+  .cat {
+    width: 250px;
+    height: 250px;
+  }
+}
