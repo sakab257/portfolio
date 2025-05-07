@@ -12,7 +12,7 @@ html, body {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-color: #161616; /* Fond complètement noir pour correspondre à l'image */
+  background-color: #161616;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
@@ -29,7 +29,7 @@ html, body {
 }
 
 .maintenance-box {
-  background-color: rgba(27, 27, 27, 0.6); /* Fond plus sombre et transparent */
+  background-color: rgba(27, 27, 27, 0.6);
   border-radius: 15px;
   padding: 30px;
   width: 90%;
@@ -42,7 +42,7 @@ html, body {
   text-align: center;
   z-index: 10;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Bordure subtile */
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 h1 {
@@ -62,14 +62,14 @@ h1::after {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: white; /* Ligne blanche sous le titre pour correspondre à l'esthétique minimaliste */
+  background: white; 
 }
 
 .subtitle {
   font-size: 1.5em;
   margin-bottom: 30px;
   margin-top: 20px;
-  color: #cccccc; /* Gris clair pour le sous-titre */
+  color: #cccccc;
   font-weight: 300;
 }
 
@@ -79,7 +79,7 @@ h1::after {
 
 .launch-date {
   font-weight: 600;
-  color: white; /* Texte blanc pour meilleure lisibilité */
+  color: white;
   margin-top: 10px;
 }
 
@@ -102,7 +102,7 @@ h1::after {
 
 .social-icons a:hover {
   transform: translateY(-5px);
-  color: #aaaaaa; /* Gris clair au survol pour un effet subtil */
+  color: #aaaaaa;
 }
 
 .cat {
@@ -110,28 +110,29 @@ h1::after {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  z-index: 1; /* Mettre le chat en arrière-plan */
-  opacity: 0.8; /* Un peu transparent pour ne pas distraire */
-  width: 1500px; /* Grande taille pour l'effet visuel */
+  z-index: 1;
+  opacity: 0.8;
+  width: 1500px; 
   height: 1500px;
 }
 
 .cat img {
+  z-index:1;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 footer {
+  z-index:999;
   position: absolute;
   bottom: 10px;
   width: 100%;
   text-align: center;
   font-size: 0.8em;
-  color: rgba(255, 255, 255, 0.3); /* Gris très clair, discret */
+  color: rgba(255, 255, 255, 0.3); 
 }
 
-/* Animation plus subtile */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.03); }
@@ -139,10 +140,9 @@ footer {
 }
 
 .maintenance-box {
-  animation: pulse 4s infinite ease-in-out; /* Animation plus lente et subtile */
+  animation: pulse 4s infinite ease-in-out;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5em;
